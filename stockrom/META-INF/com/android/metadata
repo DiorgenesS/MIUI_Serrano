@@ -1,0 +1,3 @@
+post-build=samsung/serranolte/serranolte:6.0.1/MOB31K/15d13cb138:user/test-keys
+post-timestamp=1482301241
+pre-device=serranolte
