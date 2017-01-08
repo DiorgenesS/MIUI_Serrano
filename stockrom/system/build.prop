@@ -38,7 +38,7 @@ ro.product.model=GT-I9195
 ro.product.device=serranolte
 ro.product.mod_device=
 # Do not try to parse description, fingerprint, or thumbprint
-ro.build.description=serranoltexx4-user 6.0.1 MOB31K 15d13cb138 test-keys
+ro.build.description=serranoltexx-user 6.0.1 MOB31K 15d13cb138 test-keys
 ro.build.fingerprint=samsung/serranolte/serranolte:6.0.1/MOB31K/15d13cb138:user/test-keys
 ro.build.characteristics=default
 ro.cm.device=serranoltexx
