@@ -5,15 +5,17 @@ def RemoveDeviceAssert(info):
   edify = info.script
   for i in xrange(len(edify.script)):
     if "ro.product" in edify.script[i]:
-      edify.script[i] = ''
+      edify.script[i] = """assert(getprop("ro.product.device") == "serranolte" || getprop("ro.build.product") == "serranolte" || getprop("ro.product.device") == "serranoltebmc" || getprop("ro.build.product") == "serranoltebmc" || getprop("ro.product.device") == "serranoltektt" || getprop("ro.build.product") == "serranoltektt" || getprop("ro.product.device") == "serranoltexx" || getprop("ro.build.product") == "serranoltexx" || abort("This package is for device: serranolte,serranoltebmc,serranoltektt,serranoltexx; this device is " + getprop("ro.product.device") + "."););
+unmount("/data");
+unmount("/system");"""
       return
 
 def AddAssertions(info):
-    edify = info.script
-    for i in xrange(len(edify.script)):
-        if " ||" in edify.script[i] and ("ro.product.device" in edify.script[i] or "ro.build.product" in edify.script[i]):
-            edify.script[i] = edify.script[i].replace(" ||", ' || getprop("ro.build.product") == "serranolte" || getprop("ro.product.device") == "serranoltexx" || getprop("ro.build.product") == "serranoltexx" ||')
-            return
+   edify = info.script
+   for i in xrange(len(edify.script)):
+    if " ||" in edify.script[i] and ("ro.product.device" in edify.script[i] or "ro.build.product" in edify.script[i]):
+      edify.script[i] = edify.script[i].replace(" ||", ' ')
+      return
 
 def AddArgsForFormatSystem(info):
   edify = info.script
@@ -31,7 +33,7 @@ def WritePolicyConfig(info):
 
 def FullOTA_InstallEnd(info):
     WritePolicyConfig(info)
-    AddAssertions(info)
+    RemoveDeviceAssert(info)
 
 def IncrementalOTA_InstallEnd(info):
-    AddAssertions(info)
+    RemoveDeviceAssert(info)
