@@ -3,7 +3,7 @@
 #sh for miui patchrom
 
 pwd=$PWD
-device="SerranolteGlobal"   # Modify the Device Name as required
+device="i9195Global"        # Modify the Device Name as required
 version="6.0"               # Modify the Android Version as required
 
 function BUILD_DATE() {
