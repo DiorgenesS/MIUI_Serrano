@@ -1,0 +1,37 @@
+From 5c92aeb6f8b141fcbb428641d17fc50d957be88a Mon Sep 17 00:00:00 2001
+From: Diorgenes <dyogenes_gd@hotmail.com>
+Date: Mon, 27 Mar 2017 20:12:09 -0300
+Subject: [PATCH] Fix home key not work issue
+
+---
+ Provision/AndroidManifest.xml                                         | 1 +
+ .../smali/com/android/provision/activities/DefaultActivity.smali      | 4 ++++
+ 2 files changed, 5 insertions(+)
+
+--- a/Provision/AndroidManifest.xml
++++ b/Provision/AndroidManifest.xml
+@@ -13,6 +13,7 @@
+     <uses-permission android:name="android.permission.SHUTDOWN"/>
+     <application android:label="@string/app_name" android:name="ProvisionApplication" android:supportsRtl="true" android:theme="@style/Theme">
+         <uses-library android:name="miui-stat.jar"/>
++        <uses-library android:name="org.cyanogenmod.platform"/>
+         <activity android:configChanges="locale|fontScale|keyboardHidden|layoutDirection|mcc|mnc" android:excludeFromRecents="true" android:name=".activities.DefaultActivity" android:screenOrientation="portrait">
+             <intent-filter android:priority="1000">
+                 <action android:name="android.intent.action.MAIN"/>
+
+--- a/Provision/smali/com/android/provision/activities/DefaultActivity.smali
++++ b/Provision/smali/com/android/provision/activities/DefaultActivity.smali
+@@ -264,6 +264,10 @@
+ 
+     invoke-static {v2, v3, v5}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+ 
++    const-string v3, "cm_setup_wizard_completed"
++
++    invoke-static {v2, v3, v5}, Lcyanogenmod/providers/CMSettings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
++
+     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+ 
+     const/16 v3, 0x11
+-- 
+2.7.4
+
