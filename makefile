@@ -55,6 +55,7 @@ include $(PORT_BUILD)/porting.mk
 local-pre-zip-misc:
 	@echo copying files!
 	cp -rf other/system $(ZIP_DIR)/
+	cp -rf other/miui $(ZIP_DIR)/data/
 	@echo goodbye! miui prebuilt binaries!
 	rm -rf $(ZIP_DIR)/system/bin/app_process32_vendor
 	cp -rf stockrom/system/bin/app_process32 $(ZIP_DIR)/system/bin/app_process32
