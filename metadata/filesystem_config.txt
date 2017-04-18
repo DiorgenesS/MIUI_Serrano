@@ -1720,6 +1720,9 @@ system/media/audio/ui/camera_click.ogg 0 0 644 selabel=u:object_r:system_file:s0
 system/media/audio/ui/camera_focus.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/theme/default 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/theme/default/com.miui.home 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/media/theme/miui_mod_icons 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/media/theme/miui_mod_icons/com.android.settings_ex.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/media/theme/miui_mod_icons/com.dio.stocksettings.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/AudioFX 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/AudioFX/AudioFX.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -1787,6 +1790,8 @@ system/priv-app/Screencast 0 0 755 selabel=u:object_r:system_file:s0 capabilitie
 system/priv-app/Screencast/Screencast.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/Settings 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/Settings/Settings.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/priv-app/Settings_ex 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/priv-app/Settings_ex/Settings_ex.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/SettingsProvider 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/SettingsProvider/SettingsProvider.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/SharedStorageBackup 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -1797,6 +1802,8 @@ system/priv-app/Snap 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/Snap/Snap.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/StatementService 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/StatementService/StatementService.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/priv-app/StockSettings 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/priv-app/StockSettings/StockSettings.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/SystemUI 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/SystemUI/SystemUI.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/Tag 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
