@@ -14,6 +14,11 @@ cd $TARGET_BOOT_DIR/ramdisk
 cpio -i < ../boot.img-ramdisk
 cd - > /dev/null
 
+# remove  init.superuser.rc
+if [ -a $TARGET_BOOT_DIR/ramdisk/init.superuser.rc ];then
+rm -rf $TARGET_BOOT_DIR/ramdisk/init.superuser.rc
+fi
+
 # ramdisk miui
 if [ -d overlay/boot/ramdisk ];then
 cp -rf overlay/boot/ramdisk/* $TARGET_BOOT_DIR/ramdisk/
