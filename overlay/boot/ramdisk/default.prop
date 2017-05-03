@@ -19,4 +19,4 @@ persist.sys.usb.config=mtp,adb
 #
 ro.bootimage.build.date=Tue Dec 20 22:35:00 PST 2016
 ro.bootimage.build.date.utc=1482302100
-ro.bootimage.build.fingerprint=samsung/cm_serranoltexx/serranoltexx:6.0.1/MOB31K/15d13cb138:userdebug/test-keys
+ro.bootimage.build.fingerprint=samsung/serranoltexx/serranoltexx:6.0.1/MOB31K/15d13cb138:user/release-keys
