@@ -1,8 +1,8 @@
-getprop("ro.product.device") == "serranolte" || abort("This package is for \"serranolte\" devices; this is a \"" + getprop("ro.product.device") + "\".");
-mount("ext4", "EMMC", "/dev/block/mmcblk0p24", "/data", "");
-ui_print("Target: samsung/serranolte/serranolte:6.0.1/MOB31K/15d13cb138:user/test-keys");
+getprop("ro.product.device") == "serrano3g" || abort("This package is for \"serrano3g\" devices; this is a \"" + getprop("ro.product.device") + "\".");
+mount("f2fs", "EMMC", "/dev/block/platform/msm_sdcc.1/by-name/userdata", "/data", "");
+ui_print("Target: samsung/serrano3gxx/serrano3g:4.4.2/KOT49H/I9190XXUCNG1:user/release-keys");
 show_progress(0.750000, 0);
-mount("ext4", "EMMC", "/dev/block/mmcblk0p21", "/system", "");
+mount("ext4", "EMMC", "/dev/block/platform/msm_sdcc.1/by-name/system", "/system", "");
 package_extract_file("META-INF/com/miui/busybox", "/tmp/busybox");
 set_metadata("/tmp/busybox", "uid", 0, "gid", 0, "mode", 0555);
 run_program("/tmp/busybox", "rm", "-rf", "/system");
@@ -83,7 +83,6 @@ symlink("/system/lib/libjni_jpegstream.so", "/system/app/Gallery2/lib/arm/libjni
 symlink("/system/lib/libjni_latinime.so", "/system/app/LatinIME/lib/arm/libjni_latinime.so");
 symlink("/system/lib/libjni_pacprocessor.so", "/system/app/PacProcessor/lib/arm/libjni_pacprocessor.so");
 symlink("/system/lib/libjni_terminal.so", "/system/app/Terminal/lib/arm/libjni_terminal.so");
-symlink("/system/lib/libnfc_nci_jni.so", "/system/app/NfcNci/lib/arm/libnfc_nci_jni.so");
 symlink("/system/lib/libprintspooler_jni.so", "/system/app/PrintSpooler/lib/arm/libprintspooler_jni.so");
 symlink("/system/lib/libqcomfm_jni.so", "/system/app/FM2/lib/arm/libqcomfm_jni.so");
 symlink("/system/lib/librsjni.so", "/system/app/Gallery2/lib/arm/librsjni.so");
@@ -186,7 +185,6 @@ set_metadata("/system/bin/gatekeeperd", "uid", 0, "gid", 2000, "mode", 0755, "ca
 set_metadata("/system/bin/geomagneticd", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", "0x0", "selabel", "u:object_r:geomagneticd_exec:s0");
 set_metadata("/system/bin/hostapd", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", "0x0", "selabel", "u:object_r:hostapd_exec:s0");
 set_metadata("/system/bin/hostapd_cli", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", "0x0", "selabel", "u:object_r:hostapd_exec:s0");
-set_metadata("/system/bin/install-recovery.sh", "uid", 0, "gid", 0, "mode", 0750, "capabilities", "0x0", "selabel", "u:object_r:install_recovery_exec:s0");
 set_metadata("/system/bin/installd", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", "0x0", "selabel", "u:object_r:installd_exec:s0");
 set_metadata("/system/bin/insthk", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", "0x0", "selabel", "u:object_r:insthk_exec:s0");
 set_metadata("/system/bin/irsc_util", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", "0x0", "selabel", "u:object_r:irsc_util_exec:s0");
@@ -223,7 +221,6 @@ set_metadata("/system/bin/time_daemon", "uid", 0, "gid", 2000, "mode", 0755, "ca
 set_metadata("/system/bin/toolbox", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", "0x0", "selabel", "u:object_r:toolbox_exec:s0");
 set_metadata("/system/bin/toybox", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", "0x0", "selabel", "u:object_r:toolbox_exec:s0");
 set_metadata("/system/bin/tzdatacheck", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", "0x0", "selabel", "u:object_r:tzdatacheck_exec:s0");
-set_metadata("/system/bin/uncrypt", "uid", 0, "gid", 0, "mode", 0750, "capabilities", "0x0", "selabel", "u:object_r:uncrypt_exec:s0");
 set_metadata("/system/bin/vdc", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", "0x0", "selabel", "u:object_r:vdc_exec:s0");
 set_metadata("/system/bin/vold", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", "0x0", "selabel", "u:object_r:vold_exec:s0");
 set_metadata("/system/bin/wcnss_service", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", "0x0", "selabel", "u:object_r:wcnss_service_exec:s0");
@@ -237,7 +234,6 @@ set_metadata_recursive("/system/etc/ppp", "uid", 0, "gid", 0, "dmode", 0755, "fm
 set_metadata("/system/vendor", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", "0x0", "selabel", "u:object_r:system_file:s0");
 set_metadata_recursive("/system/vendor/etc", "uid", 0, "gid", 2000, "dmode", 0755, "fmode", 0644, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata("/system/vendor/etc/audio_effects.conf", "uid", 0, "gid", 0, "mode", 0644, "capabilities", "0x0", "selabel", "u:object_r:system_file:s0");
-set_metadata("/system/vendor/firmware", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", "0x0", "selabel", "u:object_r:system_file:s0");
 set_metadata("/system/vendor/lib", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", "0x0", "selabel", "u:object_r:system_file:s0");
 set_metadata_recursive("/system/vendor/lib/drm", "uid", 0, "gid", 2000, "dmode", 0755, "fmode", 0644, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata("/system/vendor/lib/drm/libdrmwvmplugin.so", "uid", 0, "gid", 0, "mode", 0644, "capabilities", "0x0", "selabel", "u:object_r:system_file:s0");
@@ -250,7 +246,7 @@ set_metadata("/system/xbin/perfprofd", "uid", 0, "gid", 2000, "mode", 0755, "cap
 set_metadata("/system/xbin/procmem", "uid", 0, "gid", 0, "mode", 06755, "capabilities", "0x0", "selabel", "u:object_r:system_file:s0");
 set_metadata("/system/xbin/procrank", "uid", 0, "gid", 0, "mode", 06755, "capabilities", "0x0", "selabel", "u:object_r:procrank_exec:s0");
 show_progress(0.050000, 5);
-package_extract_file("boot.img", "/dev/block/mmcblk0p13");
+package_extract_file("boot.img", "/dev/block/platform/msm_sdcc.1/by-name/boot");
 show_progress(0.200000, 10);
 package_extract_dir("data", "/data") || abort("Failed to extract dir from \"data\" to \"/data\".");
 package_extract_file("META-INF/com/miui/replace_key", "/tmp/replace_key");

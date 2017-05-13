@@ -8,7 +8,6 @@ private-phone-apps := \
 	FM2 \
 	KeyChain \
 	LiveWallpapers \
-	NfcNci \
 	PacProcessor \
 	PicoTts \
 	PrintSpooler \

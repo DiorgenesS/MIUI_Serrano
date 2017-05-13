@@ -85,11 +85,6 @@ system/app/LockClock 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/LockClock/LockClock.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/MiuiVideoPlayer 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/MiuiVideoPlayer/MiuiVideoPlayer.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/app/NfcNci 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/app/NfcNci/NfcNci.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/app/NfcNci/lib 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/app/NfcNci/lib/arm 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/app/NfcNci/lib/arm/libnfc_nci_jni.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/NoiseField 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/NoiseField/NoiseField.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/app/PacProcessor 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -258,7 +253,6 @@ system/bin/inotifyd 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x
 system/bin/input 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/insmod 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/install 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/bin/install-recovery.sh 0 0 750 selabel=u:object_r:install_recovery_exec:s0 capabilities=0x0
 system/bin/installd 0 2000 755 selabel=u:object_r:installd_exec:s0 capabilities=0x0
 system/bin/insthk 0 2000 755 selabel=u:object_r:insthk_exec:s0 capabilities=0x0
 system/bin/ioctl 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -459,7 +453,6 @@ system/bin/uiautomator 0 2000 755 selabel=u:object_r:system_file:s0 capabilities
 system/bin/ulimit 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/umount 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/uname 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/bin/uncrypt 0 0 750 selabel=u:object_r:uncrypt_exec:s0 capabilities=0x0
 system/bin/uniq 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/unix2dos 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/uptime 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -499,7 +492,6 @@ system/etc/hosts 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/init.qcom.audio.sh 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/init.qcom.bt.sh 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/init.qcom.fm.sh 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/etc/libnfc-brcm.conf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/media_codecs.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/media_codecs_ffmpeg.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/media_codecs_google_audio.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -527,7 +519,7 @@ system/etc/bluetooth/auto_pair_devlist.conf 0 0 644 selabel=u:object_r:system_fi
 system/etc/bluetooth/bt_did.conf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/bluetooth/bt_stack.conf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/device_features 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/etc/device_features/serranolte.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/etc/device_features/serrano3g.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/dhcpcd 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/dhcpcd/dhcpcd-run-hooks 1014 2000 550 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/dhcpcd/dhcpcd.conf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -643,8 +635,6 @@ system/etc/permissions/android.hardware.camera.flash-autofocus.xml 0 0 644 selab
 system/etc/permissions/android.hardware.camera.front.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/permissions/android.hardware.consumerir.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/permissions/android.hardware.location.gps.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/etc/permissions/android.hardware.nfc.hce.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/etc/permissions/android.hardware.nfc.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/permissions/android.hardware.sensor.gyroscope.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/permissions/android.hardware.sensor.light.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/permissions/android.hardware.sensor.proximity.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -662,7 +652,6 @@ system/etc/permissions/com.android.location.provider.xml 0 0 644 selabel=u:objec
 system/etc/permissions/com.android.media.remotedisplay.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/permissions/com.android.mediadrm.signer.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/permissions/com.cyanogenmod.android.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/etc/permissions/com.cyanogenmod.nfc.enhanced.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/permissions/handheld_core_hardware.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/permissions/org.cyanogenmod.appsuggest.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/etc/permissions/org.cyanogenmod.audio.xml 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -1327,8 +1316,6 @@ system/lib/libncurses.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=
 system/lib/libnetd_client.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/libnetlink.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/libnetutils.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/lib/libnfc-nci.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/lib/libnfc_nci_jni.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/libnfc_ndef.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/libnl.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/libntfs-3g.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -1464,7 +1451,6 @@ system/lib/hw/keystore.default.so 0 0 644 selabel=u:object_r:system_file:s0 capa
 system/lib/hw/lights.msm8960.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/hw/local_time.default.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/hw/memtrack.msm8960.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/lib/hw/nfc_nci.bcm2079x.default.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/hw/power.default.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/hw/power.msm8960.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/lib/hw/sensors.msm8960.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -1810,8 +1796,6 @@ system/priv-app/StockSettings 0 0 755 selabel=u:object_r:system_file:s0 capabili
 system/priv-app/StockSettings/StockSettings.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/SystemUI 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/SystemUI/SystemUI.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/priv-app/Tag 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/priv-app/Tag/Tag.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/TeleService 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/TeleService/TeleService.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/Telecom 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -1980,9 +1964,6 @@ system/usr/share/zoneinfo/tzdata 0 0 644 selabel=u:object_r:system_file:s0 capab
 system/vendor 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/vendor/etc 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/vendor/etc/audio_effects.conf 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/vendor/firmware 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/vendor/firmware/bcm2079xB4_firmware.ncd 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/vendor/firmware/bcm2079xB4_pre_firmware.ncd 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/vendor/lib 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/vendor/lib/libC2D2.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/vendor/lib/libCB.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0

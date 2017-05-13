@@ -40,7 +40,7 @@
 
 .field static final TRANSACTION_getUiccApplicationState:I = 0xb
 
-.field static final TRANSACTION_getUiccApplicationType:I = 0xa
+.field static final TRANSACTION_getUiccApplicationType_9:I = 0xa
 
 .field static final TRANSACTION_getUiccCardProvisioningUserPreference_1:I = 0x2
 
