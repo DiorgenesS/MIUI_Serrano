@@ -28,6 +28,7 @@ private-phone-priv-apps := \
 	ExternalStorageProvider \
 	FusedLocation \
 	InputDevices \
+	Snap \
 	ProxyHandler \
 	Screencast \
 	SharedStorageBackup \
