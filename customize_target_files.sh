@@ -15,3 +15,10 @@ cp -f other/serranolte.xml out/target_files/SYSTEM/etc/device_features
 #Added multi cust variants for miui
 rm -rf out/target_files/DATA/miui/cust
 cp -rf other/cust out/target_files/DATA/miui
+
+#Use custom updater bin file
+if [ -e $METADATA_DIR/updater ]
+then
+   echo "Use custom updater bin file"
+   cp $METADATA_DIR/updater $TARGET_FILES_DIR/OTA/bin
+fi
