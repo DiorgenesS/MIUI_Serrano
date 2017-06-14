@@ -19,7 +19,7 @@ local-modified-apps :=
 local-modified-jars := org.cyanogenmod.platform
 
 # All apks from MIUI
-local-miui-removed-apps := BugReport FM Email GameCenter MiGameCenterSDKService MiLivetalk Mipay MiuiVideo MiuiVoip OneTimeInitializer PersonalAssistant QuickSearchBox SogouInput SystemAdSolution VoiceAssist XiaomiVip XMPass 
+local-miui-removed-apps := BugReport FM Email GameCenter MiGameCenterSDKService MiLivetalk Mipay MiuiSuperMarket MiuiVideo MiuiVoip OneTimeInitializer PaymentService PersonalAssistant QuickSearchBox SogouInput SystemAdSolution VoiceAssist XiaomiVip XMPass YellowPage
 
 local-miui-modified-apps := ContactsProvider InCallUI MiuiSystemUI Provision SecurityCenter Settings TeleService XiaomiAccount
 
@@ -53,12 +53,24 @@ include $(PORT_BUILD)/porting.mk
 #updater := $(ZIP_DIR)/META-INF/com/google/android/updater-script
 #pre_install_data_packages := $(TMP_DIR)/pre_install_apk_pkgname.txt
 local-pre-zip-misc:
+	$(TOOLS_DIR)/post_process_props.py out/ZIP/system/build.prop other/build.prop
 	@echo goodbye! miui prebuilt binaries!
 	$(hide) rm -rf $(ZIP_DIR)/system/bin/app_process32_vendor
 	$(hide) cp -rf stockrom/system/bin/app_process32 $(ZIP_DIR)/system/bin/app_process32
 	@echo remove unnecessary libs!
 	$(hide) rm -rf $(ZIP_DIR)/system/lib64
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libapssdk.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libautotoucher.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libBankCardRecognizer.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libbigo265mobile_nmob.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libconnectionbase.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libDecRes_sdk.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libdidi_secure.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libfamily_jni.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libgnustl_yynmob.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libidcardquality_v1.0.3.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libJeejenAisound.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libjeejenmsc.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libjni_eglfence.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libjni_filtershow_filters.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libjni_jpegstream.so
@@ -67,8 +79,19 @@ local-pre-zip-misc:
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/librsjni.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libminivenus.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libmresearch.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libnmob_audiosdk.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libnmob_commonlib.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libnmob_newaudio.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libnmob_newvideo.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libnmob_util.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libnmob_videosdk.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libpatcher_game_jni.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/librsjni.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libsecurities_sdk.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libttscompat.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libttspico.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libwebp.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libweibosdkcore.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libweibosdkcore_sogou.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libxmpass_sdk_patcher.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/xmpass_libweibosdkcore.so
@@ -81,11 +104,14 @@ local-pre-zip-misc:
 	$(hide) rm -rf $(ZIP_DIR)/data/miui/cts.prop
 	$(hide) rm -rf $(ZIP_DIR)/data/miui/resolves_miui.conf
 	$(hide) rm -rf $(ZIP_DIR)/system/addon.d
+	$(hide) rm -rf $(ZIP_DIR)/system/bin/bugreport
 	$(hide) rm -rf $(ZIP_DIR)/system/etc/CHANGELOG-CM.txt
 	$(hide) rm -rf $(ZIP_DIR)/system/etc/CHANGES.txt
 	$(hide) rm -rf $(ZIP_DIR)/system/etc/build-manifest.xml
+	$(hide) rm -rf $(ZIP_DIR)/system/etc/init.miui.rc
 	$(hide) rm -rf $(ZIP_DIR)/system/recovery-from-boot.bak
 	$(hide) rm -rf $(ZIP_DIR)/system/media/audio/*
+	$(hide) rm -rf $(ZIP_DIR)/system/tts
 	@echo copying files!
 	$(hide) cp -rf other/system $(ZIP_DIR)/
 	$(hide) cp -rf other/miui $(ZIP_DIR)/data/
