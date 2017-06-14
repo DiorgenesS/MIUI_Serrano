@@ -5,6 +5,7 @@ private-phone-apps := \
 	Bluetooth \
 	BluetoothExt \
 	CertInstaller \
+	DocumentsUI \
 	FM2 \
 	KeyChain \
 	LiveWallpapers \
