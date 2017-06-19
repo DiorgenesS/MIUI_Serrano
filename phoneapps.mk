@@ -11,7 +11,6 @@ private-phone-apps := \
 	LiveWallpapers \
 	NfcNci \
 	PacProcessor \
-	PicoTts \
 	PrintSpooler \
 	Stk \
 	telresources \
