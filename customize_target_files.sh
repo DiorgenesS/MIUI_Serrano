@@ -5,6 +5,7 @@ OUT_DIR=$PWD/out
 TARGET_FILES_DIR=$OUT_DIR/target_files
 build_prop_file=$TARGET_FILES_DIR/SYSTEM/build.prop
 OTHER_DIR=$PWD/other
+GAPPS=$PWD/Gapps
 
 cp -f other/file_contexts out/target_files/META/
 rm -rf out/target_files/SYSTEM/vendor/preinstall
@@ -21,4 +22,11 @@ if [ -e $METADATA_DIR/updater ]
 then
    echo "Use custom updater bin file"
    cp $METADATA_DIR/updater $TARGET_FILES_DIR/OTA/bin
+fi
+
+#Added Gapps to ROM
+if [ -e $GAPPS/SYSTEM ]
+then
+   echo "Added Gapps"
+   cp -rf $GAPPS/SYSTEM $TARGET_FILES_DIR
 fi

@@ -10,7 +10,6 @@ private-phone-apps := \
 	KeyChain \
 	LiveWallpapers \
 	PacProcessor \
-	PicoTts \
 	PrintSpooler \
 	Stk \
 	telresources \
